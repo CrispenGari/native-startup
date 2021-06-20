@@ -24,7 +24,7 @@ const globalOptions = {
 };
 
 export default function App() {
-  LogBox.ignoreAllLogs(true);
+  // LogBox.ignoreAllLogs(true);
   return (
     <NavigationContainer style={styles.container}>
       <Stack.Navigator screenOptions={globalOptions}>

@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { ListItem, Avatar } from "react-native-elements";
+import { db } from "../../firebase";
 const Group = ({ group, navigateInChat }) => {
+  const [lastMessage, setLastMessage] = useState("");
+
+  useEffect(() => {
+    db.collection("groups")
+      .doc(group?.id)
+      .collection("messages")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        setLastMessage(snapshot?.docs[0]?.data()?.message);
+      });
+  }, []);
   return (
-    <ListItem.Swipeable
+    <ListItem
       bottomDivider
-      onPress={() => navigateInChat(group?.data?.name, group?.id)}
+      onPress={() => {
+        navigateInChat(group?.data?.name, group?.id);
+      }}
     >
       <Avatar
         size="medium"
@@ -20,13 +34,9 @@ const Group = ({ group, navigateInChat }) => {
       />
       <ListItem.Content>
         <ListItem.Title>{group?.data?.name}</ListItem.Title>
-        <ListItem.Subtitle numberOfLines={1}>
-          {
-            "last message last message last message last message last message last message"
-          }
-        </ListItem.Subtitle>
+        <ListItem.Subtitle numberOfLines={1}>{lastMessage}</ListItem.Subtitle>
       </ListItem.Content>
-    </ListItem.Swipeable>
+    </ListItem>
   );
 };
 
