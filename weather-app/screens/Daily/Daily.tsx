@@ -1,6 +1,8 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Home, Stats, Settings } from "../index";
+import Settings from "../Settings/Settings";
+import Home from "../Home/Home";
+import Stats from "../Stats/Stats";
 import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
 
