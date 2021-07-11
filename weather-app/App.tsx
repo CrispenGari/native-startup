@@ -1,16 +1,16 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import State from "./StateProvider/Provider";
-import Route from "./routes";
-import { View } from "react-native";
+
+import rootReducers from "./reducers";
+import { Provider } from "react-redux";
+import Layout from "./Layout/Layout";
+import { createStore } from "redux";
+
+const store = createStore(rootReducers);
 const App: React.FC = () => {
   return (
-    <State>
-      <View style={{ flex: 1, paddingTop: 25 }}>
-        <StatusBar style="auto" />
-        <Route />
-      </View>
-    </State>
+    <Provider store={store}>
+      <Layout />
+    </Provider>
   );
 };
 
