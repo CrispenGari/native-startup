@@ -1,7 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Background } from "../../components";
-
 const Home: React.FC = () => {
   return (
     <Background>
