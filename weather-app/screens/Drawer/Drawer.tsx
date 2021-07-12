@@ -23,7 +23,7 @@ const D: React.FC = () => {
             return (
               <MaterialIcons
                 name="home"
-                size={30}
+                size={24}
                 color={focused ? "lightblue" : "gray"}
               />
             );
@@ -31,7 +31,7 @@ const D: React.FC = () => {
             return (
               <Entypo
                 name="area-graph"
-                size={30}
+                size={24}
                 color={focused ? "lightblue" : "gray"}
               />
             );
@@ -39,7 +39,7 @@ const D: React.FC = () => {
           return (
             <Feather
               name="settings"
-              size={30}
+              size={24}
               color={focused ? "lightblue" : "gray"}
             />
           );
@@ -54,7 +54,7 @@ const D: React.FC = () => {
         },
         labelStyle: {
           color: "lightblue",
-          fontSize: 20,
+          fontSize: 16,
         },
         contentContainerStyle: {
           padding: 0,

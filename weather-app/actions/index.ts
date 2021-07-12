@@ -13,8 +13,16 @@ const setLocationName = (payload: any) => {
     type: constants.SET_REVERSED_GEOCODE,
   };
 };
+
+const setTemperature = (payload: any) => {
+  return {
+    payload,
+    type: constants.SET_CURRENT,
+  };
+};
 const actions = {
   setLocation,
   setLocationName,
+  setTemperature,
 };
 export default actions;

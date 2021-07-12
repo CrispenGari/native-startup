@@ -2,10 +2,11 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
-import Daily from "../screens/Daily/Daily";
-import Hourly from "../screens/Hourly/Hourly";
-import Current from "../screens/Current/Current";
+import { MaterialCommunityIcons, FontAwesome5 } from "@expo/vector-icons";
+
+import Wind from "../screens/Wind/Wind";
+import Search from "../screens/Search/Search";
+import Temperature from "../screens/Temperature/Temperature";
 const Tabs = createBottomTabNavigator();
 const Index: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Index: React.FC = () => {
       <Tabs.Navigator
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-            if (route.name === "Daily") {
+            if (route.name === "Temperature") {
               return (
                 <MaterialCommunityIcons
                   name="weather-lightning-rainy"
@@ -21,7 +22,7 @@ const Index: React.FC = () => {
                   color={focused ? "lightblue" : "gray"}
                 />
               );
-            } else if (route.name === "Hourly") {
+            } else if (route.name === "Wind") {
               return (
                 <MaterialCommunityIcons
                   name="weather-cloudy-arrow-right"
@@ -31,10 +32,10 @@ const Index: React.FC = () => {
               );
             }
             return (
-              <MaterialCommunityIcons
-                name="weather-hazy"
-                size={24}
+              <FontAwesome5
                 color={focused ? "lightblue" : "gray"}
+                name="search-location"
+                size={24}
               />
             );
           },
@@ -54,10 +55,11 @@ const Index: React.FC = () => {
         sceneContainerStyle={{
           backfaceVisibility: "hidden",
         }}
+        initialRouteName="Temperature"
       >
-        <Tabs.Screen name="Current" component={Current} />
-        <Tabs.Screen name="Hourly" component={Hourly} />
-        <Tabs.Screen name="Daily" component={Daily} />
+        <Tabs.Screen name="Temperature" component={Temperature} />
+        <Tabs.Screen name="Wind" component={Wind} />
+        <Tabs.Screen name="Search" component={Search} />
       </Tabs.Navigator>
     </NavigationContainer>
   );

@@ -1,10 +1,12 @@
 import React from "react";
 import { StyleSheet } from "react-native";
+import Settings from "../Settings/Settings";
+
 import Drawer from "../Drawer/Drawer";
-const Hourly: React.FC = () => {
+const Wind: React.FC = () => {
   return <Drawer />;
 };
 
-export default Hourly;
+export default Wind;
 
 const styles = StyleSheet.create({});

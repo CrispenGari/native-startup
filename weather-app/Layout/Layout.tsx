@@ -9,6 +9,8 @@ import actions from "../actions";
 const Layout: React.FC = () => {
   const dispatch = useDispatch();
   const location = useSelector((state: any) => state.location);
+
+  // https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=badb4f2677b77c93ba9db23cddf56302
   useEffect(() => {
     (async () => {
       const { granted } = await Location.getForegroundPermissionsAsync();

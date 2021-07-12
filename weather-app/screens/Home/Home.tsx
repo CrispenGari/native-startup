@@ -1,10 +1,11 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { Background } from "../../components";
+import WeatherCard from "../../components/WeatherCard/WeatherCard";
 const Home: React.FC = () => {
   return (
     <Background>
-      <Text>Home</Text>
+      <WeatherCard />
     </Background>
   );
 };
