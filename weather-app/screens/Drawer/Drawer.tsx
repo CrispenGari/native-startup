@@ -7,7 +7,7 @@ import Stats from "../Stats/Stats";
 import { MaterialIcons, Entypo, Feather } from "@expo/vector-icons";
 
 const Drawer = createDrawerNavigator();
-const D: React.FC = () => {
+const D: React.FC<any> = ({ routeName }) => {
   return (
     <Drawer.Navigator
       initialRouteName="Home"
@@ -61,9 +61,21 @@ const D: React.FC = () => {
         },
       }}
     >
-      <Drawer.Screen name="Home" component={Home} />
-      <Drawer.Screen name="Stats" component={Stats} />
-      <Drawer.Screen name="Settings" component={Settings} />
+      <Drawer.Screen
+        name="Home"
+        component={Home}
+        initialParams={{ parent: routeName }}
+      />
+      <Drawer.Screen
+        name="Stats"
+        component={Stats}
+        initialParams={{ parent: routeName }}
+      />
+      <Drawer.Screen
+        name="Settings"
+        component={Settings}
+        initialParams={{ parent: routeName }}
+      />
     </Drawer.Navigator>
   );
 };

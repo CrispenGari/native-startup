@@ -1,16 +1,15 @@
 import React from "react";
 import { StyleSheet, View, ActivityIndicator } from "react-native";
-import { Text, Image } from "react-native-elements";
 import { useSelector } from "react-redux";
+import { Text, Image } from "react-native-elements";
 import { EvilIcons } from "@expo/vector-icons";
-const WeatherCard: React.FC = () => {
+const WindCard: React.FC = () => {
   const current = useSelector((state: any) => state.current);
   const locationName = useSelector((state: any) => state.locationName);
-  // console.log(locationName[0]);
-  // uri: `http://openweathermap.org/img/w/${weather?.weather[0]?.icon}.png`,
   if (!locationName) {
     return <ActivityIndicator color="lightblue" size="large" />;
   }
+  console.log(current);
   return (
     <View style={styles.weather__card}>
       <View style={styles.weather__card__location}>
@@ -83,7 +82,7 @@ const WeatherCard: React.FC = () => {
   );
 };
 
-export default WeatherCard;
+export default WindCard;
 
 const styles = StyleSheet.create({
   weather__card: {

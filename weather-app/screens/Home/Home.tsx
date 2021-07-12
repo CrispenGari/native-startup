@@ -1,11 +1,22 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { Background } from "../../components";
+import SearchCard from "../../components/SearchCard/SearchCard";
 import WeatherCard from "../../components/WeatherCard/WeatherCard";
-const Home: React.FC = () => {
+import WindCard from "../../components/WindCard/WindCard";
+const Home: React.FC<any> = ({ route }) => {
+  console.log(route);
   return (
     <Background>
-      <WeatherCard />
+      {route?.params?.parent === "Temperature" ? (
+        <WeatherCard />
+      ) : route?.params?.parent === "Wind" ? (
+        <WindCard />
+      ) : route?.params?.parent === "Search" ? (
+        <SearchCard />
+      ) : (
+        <ActivityIndicator color="lightblue" size="large" />
+      )}
     </Background>
   );
 };

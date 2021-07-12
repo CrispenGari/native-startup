@@ -4,7 +4,7 @@ import Drawer from "../Drawer/Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import actions from "../../actions";
 import Axios from "../../axios";
-const Temperature: React.FC = () => {
+const Temperature: React.FC<any> = (props) => {
   const location = useSelector((state: any) => state.location);
   const dispatch = useDispatch();
   const url = `weather?lat=-32.7749909&lon=26.8523897&units=metrics&appid=badb4f2677b77c93ba9db23cddf56302`;
@@ -17,7 +17,7 @@ const Temperature: React.FC = () => {
       dispatch(actions.setTemperature(data));
     })();
   }, [url]);
-  return <Drawer />;
+  return <Drawer routeName={props.route?.name} />;
 };
 
 export default Temperature;
