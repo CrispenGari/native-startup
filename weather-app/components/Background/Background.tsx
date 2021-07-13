@@ -1,9 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View, ImageBackground } from "react-native";
+import { StyleSheet, ImageBackground } from "react-native";
 const background = require("../../assets/background.jpg");
-const Background: React.FC = ({ children }) => {
+const Background: React.FC<any> = ({ children, customStyles }) => {
   return (
-    <ImageBackground style={styles.container} source={background}>
+    <ImageBackground
+      style={styles.container}
+      source={customStyles ? null : background}
+    >
       {children}
     </ImageBackground>
   );

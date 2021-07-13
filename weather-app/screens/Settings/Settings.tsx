@@ -4,8 +4,16 @@ import { Background } from "../../components";
 
 const Settings: React.FC = () => {
   return (
-    <Background>
-      <Text>Settings</Text>
+    <Background customStyles={true}>
+      <View
+        style={{
+          backgroundColor: "black",
+          flex: 1,
+          width: "100%",
+        }}
+      >
+        <Text>Settings</Text>
+      </View>
     </Background>
   );
 };

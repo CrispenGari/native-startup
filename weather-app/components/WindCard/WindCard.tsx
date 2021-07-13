@@ -36,19 +36,6 @@ const WindCard: React.FC = () => {
           locationName[0]?.country
         }, ${locationName[0]?.isoCountryCode?.toLowerCase()}`}</Text>
       </View>
-
-      <Image
-        style={{
-          width: 40,
-          height: 40,
-        }}
-        source={{
-          uri: `http://openweathermap.org/img/w/${current?.weather[0]?.icon}.png`,
-        }}
-        PlaceholderContent={
-          <ActivityIndicator color="lightblue" size="small" />
-        }
-      />
       <Text
         style={{
           color: "white",

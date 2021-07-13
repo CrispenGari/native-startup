@@ -51,6 +51,7 @@ const Index: React.FC = () => {
             bottom: 0,
             elevation: 0,
           },
+          keyboardHidesTabBar: true,
         }}
         sceneContainerStyle={{
           backfaceVisibility: "hidden",

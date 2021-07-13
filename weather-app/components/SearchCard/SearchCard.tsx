@@ -1,22 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { SearchBar } from "react-native-elements";
+import { KeyboardAvoidingView, StyleSheet, View } from "react-native";
+import Input from "../Input/Input";
 const SearchCard = () => {
   return (
     <View>
-      <SearchBar
-        platform="android"
-        placeholder="Type Here..."
-        onChangeText={() => {}}
-        value={""}
-        style={{
-          width: 222,
-        }}
-        containerStyle={{
-          width: 200,
-          padding: 0,
-        }}
-      />
+      <KeyboardAvoidingView>
+        <Input />
+      </KeyboardAvoidingView>
     </View>
   );
 };
