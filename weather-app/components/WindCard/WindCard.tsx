@@ -3,13 +3,14 @@ import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { useSelector } from "react-redux";
 import { Text, Image } from "react-native-elements";
 import { EvilIcons } from "@expo/vector-icons";
+import helperFunctions from "../../utils/helperFunctions";
 const WindCard: React.FC = () => {
   const current = useSelector((state: any) => state.current);
   const locationName = useSelector((state: any) => state.locationName);
   if (!locationName) {
     return <ActivityIndicator color="lightblue" size="large" />;
   }
-  console.log(current);
+  console.log(current?.wind);
   return (
     <View style={styles.weather__card}>
       <View style={styles.weather__card__location}>
@@ -40,9 +41,13 @@ const WindCard: React.FC = () => {
         style={{
           color: "white",
           fontWeight: "500",
+          textShadowColor: "black",
+          textShadowRadius: 30,
+          marginBottom: -15,
+          marginTop: 15,
         }}
       >
-        {current?.weather[0]?.main}
+        WIND DIRECTION
       </Text>
       <Text
         style={{
@@ -53,17 +58,26 @@ const WindCard: React.FC = () => {
           textShadowRadius: 30,
         }}
       >
-        {current?.main.temp?.toFixed(0)}°c
+        {helperFunctions.findWindDirection(current?.wind?.deg)}
       </Text>
       <Text
         style={{
           color: "white",
-          fontWeight: "500",
+          fontWeight: "800",
           textShadowColor: "black",
-          fontSize: 16,
         }}
       >
-        {current?.weather[0]?.description}
+        WIND SPEED
+      </Text>
+      <Text
+        style={{
+          color: "white",
+          fontWeight: "800",
+          textShadowColor: "black",
+          fontSize: 20,
+        }}
+      >
+        {current?.wind?.speed} m/s
       </Text>
     </View>
   );
@@ -77,7 +91,6 @@ const styles = StyleSheet.create({
     padding: 10,
     width: "95%",
     height: "80%",
-    // backgroundColor: "rgba(0, 0, 0, .5)",
     alignItems: "center",
   },
   weather__card__location: {},
