@@ -4,19 +4,25 @@ import Drawer from "../Drawer/Drawer";
 import { useDispatch, useSelector } from "react-redux";
 import actions from "../../actions";
 import Axios from "../../axios";
+import API_KEY from "../../keys/keys";
 const Temperature: React.FC<any> = (props) => {
-  const location = useSelector((state: any) => state.location);
   const dispatch = useDispatch();
-  const url = `weather?lat=-32.7749909&lon=26.8523897&units=metrics&appid=badb4f2677b77c93ba9db23cddf56302`;
+
+  const location = useSelector((state: any) => state.location);
+  console.log(location);
   useEffect(() => {
-    (async () => {
-      const { data } = await Axios({
-        method: "GET",
-        url: url,
-      });
-      dispatch(actions.setTemperature(data));
-    })();
-  }, [url]);
+    if (location) {
+      const { latitude: lat, longitude: lon } = location.coords;
+      const url = `weather?lat=${lat}&lon=${lon}&units=metrics&appid=${API_KEY}`;
+      (async () => {
+        const { data } = await Axios({
+          method: "GET",
+          url: url,
+        });
+        dispatch(actions.setTemperature(data));
+      })();
+    }
+  }, [location]);
   return <Drawer routeName={props.route?.name} />;
 };
 

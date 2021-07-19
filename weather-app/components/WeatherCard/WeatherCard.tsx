@@ -6,8 +6,6 @@ import { EvilIcons } from "@expo/vector-icons";
 const WeatherCard: React.FC = () => {
   const current = useSelector((state: any) => state.current);
   const locationName = useSelector((state: any) => state.locationName);
-  // console.log(locationName[0]);
-  // uri: `http://openweathermap.org/img/w/${weather?.weather[0]?.icon}.png`,
   if (!locationName) {
     return <ActivityIndicator color="lightblue" size="large" />;
   }

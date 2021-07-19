@@ -5,7 +5,6 @@ import SearchCard from "../../components/SearchCard/SearchCard";
 import WeatherCard from "../../components/WeatherCard/WeatherCard";
 import WindCard from "../../components/WindCard/WindCard";
 const Home: React.FC<any> = ({ route }) => {
-  console.log(route);
   return (
     <Background>
       {route?.params?.parent === "Temperature" ? (
@@ -22,5 +21,3 @@ const Home: React.FC<any> = ({ route }) => {
 };
 
 export default Home;
-
-const styles = StyleSheet.create({});

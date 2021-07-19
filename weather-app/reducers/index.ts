@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 import currentReducer from "./currentReducer/currentReducer";
-import dailyReducer from "./dailyReducer";
+import searchedReducer from "./searchedReducer";
 import locationNameReducer from "./locationNameReducer";
 import locationReducer from "./locationReducer";
 
 const rootReducers = combineReducers({
-  daily: dailyReducer,
+  searched: searchedReducer,
   location: locationReducer,
   locationName: locationNameReducer,
   current: currentReducer,

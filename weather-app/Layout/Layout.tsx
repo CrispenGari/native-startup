@@ -2,15 +2,13 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import Route from "../routes";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import * as Location from "expo-location";
 import { useDispatch, useSelector } from "react-redux";
 import actions from "../actions";
 const Layout: React.FC = () => {
   const dispatch = useDispatch();
   const location = useSelector((state: any) => state.location);
-
-  // https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=badb4f2677b77c93ba9db23cddf56302
   useEffect(() => {
     (async () => {
       const { granted } = await Location.getForegroundPermissionsAsync();
@@ -27,16 +25,18 @@ const Layout: React.FC = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    (async () => {
-      const { latitude: lat, longitude: long } = location?.coords;
-      if (lat && long) {
-        const reversed = await Location.reverseGeocodeAsync({
-          latitude: Number(lat),
-          longitude: Number(long),
-        });
-        dispatch(actions.setLocationName(reversed));
-      }
-    })();
+    if (location) {
+      (async () => {
+        const { latitude: lat, longitude: long } = location?.coords;
+        if (lat && long) {
+          const reversed = await Location.reverseGeocodeAsync({
+            latitude: Number(lat),
+            longitude: Number(long),
+          });
+          dispatch(actions.setLocationName(reversed));
+        }
+      })();
+    }
   }, [location, dispatch]);
 
   return (

@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { MaterialCommunityIcons, FontAwesome5 } from "@expo/vector-icons";
@@ -67,5 +66,3 @@ const Index: React.FC = () => {
 };
 
 export default Index;
-
-const styles = StyleSheet.create({});

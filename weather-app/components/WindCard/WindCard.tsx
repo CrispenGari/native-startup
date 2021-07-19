@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View, ActivityIndicator } from "react-native";
 import { useSelector } from "react-redux";
-import { Text, Image } from "react-native-elements";
+import { Text } from "react-native-elements";
 import { EvilIcons } from "@expo/vector-icons";
 import helperFunctions from "../../utils/helperFunctions";
 const WindCard: React.FC = () => {
@@ -10,7 +10,6 @@ const WindCard: React.FC = () => {
   if (!locationName) {
     return <ActivityIndicator color="lightblue" size="large" />;
   }
-  console.log(current?.wind);
   return (
     <View style={styles.weather__card}>
       <View style={styles.weather__card__location}>

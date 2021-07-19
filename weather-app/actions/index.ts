@@ -20,9 +20,16 @@ const setTemperature = (payload: any) => {
     type: constants.SET_CURRENT,
   };
 };
+const setSearched = (payload: any) => {
+  return {
+    payload,
+    type: constants.SET_SEARCH,
+  };
+};
 const actions = {
   setLocation,
   setLocationName,
   setTemperature,
+  setSearched,
 };
 export default actions;

@@ -81,5 +81,3 @@ const D: React.FC<any> = ({ routeName }) => {
 };
 
 export default D;
-
-const styles = StyleSheet.create({});
