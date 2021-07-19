@@ -1,13 +1,21 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { useSelector } from "react-redux";
 import { Background } from "../../components";
-
-const Stats: React.FC = () => {
-  const locationName = useSelector((state: any) => state.locationName);
+import Plot from "../../components/Plot/Plot";
+const Stats: React.FC<any> = ({ route }) => {
+  const current = useSelector((state: any) => state.current);
+  const labels = ["feels_like", "temp", "temp_max", "temp_min"];
+  const data = Object.entries(current?.main)
+    .filter(([key, value]) => labels.indexOf(key) !== -1)
+    .map(([key, value]) => value);
   return (
     <Background>
-      <Text>{JSON.stringify(locationName)}</Text>
+      {current ? (
+        <Plot data={data} labels={labels} />
+      ) : (
+        <ActivityIndicator color="lightseagreen" size="large" />
+      )}
     </Background>
   );
 };
