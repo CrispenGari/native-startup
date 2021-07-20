@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { LineChart } from "react-native-chart-kit";
-const Plot: React.FC<any> = ({ labels, data }) => {
+const Plot: React.FC<any> = ({ labels, data, title }) => {
   return (
     <View
       style={{
@@ -18,7 +18,7 @@ const Plot: React.FC<any> = ({ labels, data }) => {
           textAlign: "center",
         }}
       >
-        Daily Temperature
+        {title}
       </Text>
       <LineChart
         data={{
