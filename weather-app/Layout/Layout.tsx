@@ -18,8 +18,11 @@ const Layout: React.FC = () => {
       const { granted: grantedPermission } =
         await Location.getForegroundPermissionsAsync();
       if (grantedPermission) {
-        const location = await Location.getCurrentPositionAsync({});
-        dispatch(actions.setLocation(location));
+        await Location.getCurrentPositionAsync({})
+          .then((location) => {
+            dispatch(actions.setLocation(location));
+          })
+          .catch((err) => console.log(err));
       }
     })();
   }, [dispatch]);
@@ -38,7 +41,6 @@ const Layout: React.FC = () => {
       })();
     }
   }, [location, dispatch]);
-
   return (
     <View style={{ flex: 1, paddingTop: 25 }}>
       <StatusBar style="auto" />
