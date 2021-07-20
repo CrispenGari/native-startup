@@ -7,9 +7,7 @@ import Axios from "../../axios";
 import API_KEY from "../../keys/keys";
 const Temperature: React.FC<any> = (props) => {
   const dispatch = useDispatch();
-
   const location = useSelector((state: any) => state.location);
-  console.log(location);
   useEffect(() => {
     if (location) {
       const { latitude: lat, longitude: lon } = location.coords;

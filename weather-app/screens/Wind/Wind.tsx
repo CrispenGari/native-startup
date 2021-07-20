@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 
 import Drawer from "../Drawer/Drawer";
 const Wind: React.FC<any> = (props) => {
@@ -7,5 +6,3 @@ const Wind: React.FC<any> = (props) => {
 };
 
 export default Wind;
-
-const styles = StyleSheet.create({});
