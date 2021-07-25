@@ -17,14 +17,13 @@ const Theme: React.FC<any> = ({ setTheme }) => {
         justifyContent: "center",
         alignItems: "center",
         flex: 1,
-        height: 300,
+        height: 100,
       }}
     >
       <Text
         style={{
           marginBottom: 20,
           fontSize: 20,
-          fontFamily: "OpenSansSemiBold",
           color: value ? "white" : "black",
         }}
       >

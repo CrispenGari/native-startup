@@ -8,27 +8,14 @@ import {
   ActivityIndicator,
   RefreshControl,
   ScrollView,
-  Text,
 } from "react-native";
 import { COLORS } from "./assets/colors";
-import { Stories, Theme, Header } from "./components";
-import Font, { useFonts } from "expo-font";
-import { useEffect } from "react";
+import { Stories, Theme, Header, Suggestions } from "./components";
+
 const App = () => {
   const [theme, setTheme] = React.useState<string>(COLORS.LIGHT_BACKGROUND);
   const [loading, setLoading] = React.useState(false);
 
-  useEffect(() => {
-    (async () => {
-      await Font.loadAsync({
-        OpenSansLight: require("./assets/fonts/OpenSans-Light.ttf"),
-        OpenSansRegular: require("./assets/fonts/OpenSans-Regular.ttf"),
-        OpenSansSemiBold: require("./assets/fonts/OpenSans-SemiBold.ttf"),
-      })
-        .then(() => setLoading(false))
-        .catch((err) => console.log(err));
-    })();
-  }, []);
   if (loading) {
     return (
       <ActivityIndicator
@@ -41,8 +28,15 @@ const App = () => {
     );
   }
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
+    <View
+      style={[
+        styles.container,
+        {
+          backgroundColor: theme,
+        },
+      ]}
+    >
+      <StatusBar style={theme === COLORS.LIGHT_BACKGROUND ? "dark" : "light"} />
       <SafeAreaView
         style={{
           paddingTop: Platform.OS === "android" ? 25 : 0,
@@ -71,7 +65,10 @@ const App = () => {
         {/* Stories */}
         <Stories theme={theme} />
         {/* Theme Changer */}
+        {/*  */}
         <Theme setTheme={setTheme} />
+        {/* Who to follow */}
+        <Suggestions theme={theme} />
       </ScrollView>
     </View>
   );

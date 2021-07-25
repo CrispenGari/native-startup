@@ -75,7 +75,6 @@ const Story: React.FC<Props> = ({ item, theme }) => {
       )}
       <Text
         style={{
-          fontFamily: "OpenSansRegular",
           color: "gray",
           fontSize: 10,
           marginTop: item?.name === "crispen" ? 5 : 0,
