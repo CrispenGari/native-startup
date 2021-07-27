@@ -4,7 +4,7 @@ In this Readme we are going to learn how to apply linear gradients on a componen
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/practice/rn-linear-gradient/demos/Screenshot_20210727-085000_Expo%20Go.jpg)
 
 ### Installation
 
