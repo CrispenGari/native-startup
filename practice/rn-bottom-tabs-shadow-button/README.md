@@ -2,7 +2,7 @@
 
 In this README file we are going to create the following ui for the bottom tab navigator.
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/practice/rn-bottom-tabs-shadow-button/Screenshot_20210729-101848_Expo%20Go.jpg)
 
 ### Requirements
 
