@@ -9,7 +9,7 @@ In this project we are going to create a simple application with react native th
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/beautiful-uis/imgs/Screenshot_20210730-113613_Expo%20Go.jpg)
 
 ### Installation
 
