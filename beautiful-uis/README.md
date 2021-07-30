@@ -17,3 +17,7 @@
 #### b. light theme
 
 ![img](https://github.com/CrispenGari/native-startup/blob/main/beautiful-uis/imgs/Screenshot_20210725-170735_Expo%20Go.jpg)
+
+### 3. Google Maps
+
+![img](https://github.com/CrispenGari/native-startup/blob/main/beautiful-uis/imgs/Screenshot_20210730-113613_Expo%20Go.jpg)
