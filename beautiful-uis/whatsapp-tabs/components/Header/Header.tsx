@@ -18,8 +18,7 @@ const Header = () => {
       <Text
         style={{
           color: "white",
-          fontFamily: "AssistantRegular",
-          fontSize: 25,
+          fontSize: 23,
           fontWeight: "800",
         }}
       >
