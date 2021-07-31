@@ -7,12 +7,15 @@ import {
   SafeAreaView,
   StatusBar,
   ScrollView,
+  Dimensions,
 } from "react-native";
 
 import { useFonts } from "expo-font";
 import Header from "./components/Header/Header";
 import { Tabs } from "./navigation";
 import { NavigationContainer } from "@react-navigation/native";
+
+const { height, width } = Dimensions.get("screen");
 export default function App() {
   const [loaded, error] = useFonts({
     AssistantExtraLight: require("./assets/fonts/Assistant-ExtraLight.ttf"),
@@ -24,7 +27,7 @@ export default function App() {
     return <ActivityIndicator color="lightseagreen" size="large" />;
   }
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar barStyle="light-content" />
       <SafeAreaView>
         <Header />
@@ -32,14 +35,13 @@ export default function App() {
       <View
         style={{
           flex: 1,
-          backgroundColor: "red",
         }}
       >
         <NavigationContainer>
           <Tabs />
         </NavigationContainer>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -47,5 +49,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    height,
   },
 });

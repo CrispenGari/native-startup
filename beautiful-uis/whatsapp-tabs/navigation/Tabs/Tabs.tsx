@@ -27,7 +27,6 @@ const Tabs = () => {
       screenOptions={{}}
       sceneContainerStyle={{
         flex: 1,
-        backgroundColor: "red",
         height: "100%",
       }}
       swipeEnabled

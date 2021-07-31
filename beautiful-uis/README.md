@@ -21,3 +21,6 @@
 ### 3. Google Maps
 
 ![img](https://github.com/CrispenGari/native-startup/blob/main/beautiful-uis/imgs/Screenshot_20210730-113613_Expo%20Go.jpg)
+### 3. WhatsApp Tabs
+
+![img](https://github.com/CrispenGari/native-startup/blob/main/beautiful-uis/imgs/Screenshot_20210731-204321_Expo%20Go.jpg)
