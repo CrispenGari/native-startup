@@ -4,7 +4,8 @@ import { COLORS } from "../../assets/colors";
 import Button from "../../components/Button/Button";
 import { MaterialIcons } from "@expo/vector-icons";
 import { Feather } from "@expo/vector-icons";
-const Status = () => {
+
+const Status: React.FC<any> = () => {
   return (
     <View
       style={{

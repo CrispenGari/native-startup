@@ -2,12 +2,15 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Camera, Status, Chats, Calls } from "../../screens";
+import ChatStack from "../Stack/Chats/Chats";
 import { COLORS } from "../../assets/colors";
 import CustomTab from "../../components/CustomTab/CustomTab";
 import { Feather } from "@expo/vector-icons";
+import { useSelector } from "react-redux";
 const Tab = createMaterialTopTabNavigator();
 
-const Tabs = () => {
+const Tabs: React.FC<any> = ({}) => {
+  const showHeader = useSelector((state: any) => state.showHeader);
   return (
     <Tab.Navigator
       initialRouteName="Chats"
@@ -16,6 +19,7 @@ const Tabs = () => {
           backgroundColor: COLORS.HEADER_COLOR,
           elevation: 0,
           borderWidth: 0,
+          display: showHeader ? "flex" : "none",
         },
         showIcon: false,
         // renderIndicator: () => <View />,
@@ -51,7 +55,7 @@ const Tabs = () => {
       />
       <Tab.Screen
         name="Chats"
-        component={Chats}
+        children={() => <ChatStack />}
         options={{
           tabBarLabel: ({ color, focused }) => (
             <CustomTab content={"5"} label="CHATS" focused={focused} />

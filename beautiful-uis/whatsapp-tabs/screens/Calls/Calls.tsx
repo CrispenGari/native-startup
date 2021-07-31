@@ -3,7 +3,7 @@ import { StyleSheet, ScrollView, View } from "react-native";
 import { COLORS } from "../../assets/colors";
 import Button from "../../components/Button/Button";
 import { MaterialIcons } from "@expo/vector-icons";
-const Calls = () => {
+const Calls: React.FC<any> = ({ route }) => {
   return (
     <View
       style={{
