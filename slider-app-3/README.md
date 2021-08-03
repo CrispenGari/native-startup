@@ -10,4 +10,4 @@ yarn add react-native-gesture-handler
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/slider-app-3/Screenshot_20210803-203825_Expo%20Go.jpg)
