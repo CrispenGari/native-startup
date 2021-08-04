@@ -1,5 +1,3 @@
-import { createRef } from "react";
-
 const data = [
   {
     id: 1,
