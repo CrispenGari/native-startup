@@ -10,4 +10,4 @@ expo install expo-linear-gradient
 
 ### App Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/slider-app-4/Screenshot_20210804-143227_Expo%20Go.jpg)
