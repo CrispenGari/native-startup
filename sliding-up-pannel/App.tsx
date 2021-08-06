@@ -31,40 +31,32 @@ const App: React.FC = () => {
         snappingPoints={[height + 120]}
       >
         <View style={styles.container}>
-          <TouchableOpacity
-            onPress={() => _panel.show()}
-            style={{
-              flexDirection: "row",
-              position: "absolute",
-              width: "100%",
-              left: 0,
-              justifyContent: "center",
-              alignItems: "center",
-              padding: 10,
-              top: height - 100,
-            }}
-          >
-            <Text
-              style={{
-                color: "white",
-                fontSize: 20,
-              }}
-            >
-              Swipe Up
-            </Text>
-            <EvilIcons name="chevron-up" size={40} color="white" />
-          </TouchableOpacity>
-
-          <View
-            style={{
-              backgroundColor: "white",
-              flex: 1,
-              width,
-              height,
-            }}
-          ></View>
+          <Text style={{ color: "white" }}>Hello</Text>
         </View>
       </SlidingUpPanel>
+      <TouchableOpacity
+        onPress={() => _panel.show()}
+        style={{
+          flexDirection: "row",
+          position: "absolute",
+          width: "100%",
+          left: 0,
+          justifyContent: "center",
+          alignItems: "center",
+          padding: 10,
+          top: height - 100,
+        }}
+      >
+        <Text
+          style={{
+            color: "white",
+            fontSize: 20,
+          }}
+        >
+          Swipe Up
+        </Text>
+        <EvilIcons name="chevron-up" size={40} color="white" />
+      </TouchableOpacity>
     </View>
   );
 };
