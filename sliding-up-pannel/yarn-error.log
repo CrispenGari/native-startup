@@ -1,0 +1,50 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\crisp\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Users\crisp\anaconda3;C:\Users\crisp\anaconda3\Library\mingw-w64\bin;C:\Users\crisp\anaconda3\Library\usr\bin;C:\Users\crisp\anaconda3\Library\bin;C:\Users\crisp\anaconda3\Scripts;C:\Users\crisp\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\crisp\AppData\Local\Programs\Python\Python39\;C:\Users\crisp\AppData\Local\Microsoft\WindowsApps;C:\Users\crisp\AppData\Roaming\npm;C:\Users\crisp\AppData\Local\Programs\Microsoft VS Code\bin;;C:\Program Files\JetBrains\PyCharm Community Edition 2020.3.5\bin;
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.17.3
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, open 'C:\Users\crisp\AppData\Local\Yarn\Cache\v6\npm-@babel-helper-compilation-targets-7.15.0-973df8cbd025515f3ff25db0c05efc704fa79818-integrity\node_modules\@babel\helper-compilation-targets\.yarn-metadata.json'
+
+npm manifest: 
+  {
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web",
+      "eject": "expo eject"
+    },
+    "dependencies": {
+      "expo": "~42.0.1",
+      "expo-status-bar": "~1.0.4",
+      "react": "16.13.1",
+      "react-dom": "16.13.1",
+      "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+      "react-native-web": "~0.13.12"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.9.0",
+      "@types/react": "~16.9.35",
+      "@types/react-native": "~0.63.2",
+      "typescript": "~4.0.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
