@@ -4,6 +4,8 @@ In this project we are going to create a simple `swipable` pannel so that when t
 
 ### Demo
 
+![img](https://github.com/CrispenGari/native-startup/blob/main/rn-swipable-pannel/Screenshot_20210806-141025_Expo%20Go.jpg)
+
 ### Installations
 
 1. `rn-swipeable-panel`
