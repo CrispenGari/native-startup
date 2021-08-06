@@ -10,8 +10,8 @@ import {
 import MapView, { Callout, Marker } from "react-native-maps";
 
 import * as Location from "expo-location";
-import Header from "./components/Header";
-import mapStyles from "./utils/mapstyles";
+import Header from "../components/Header";
+import mapStyles from "../utils/mapstyles";
 const { width, height } = Dimensions.get("screen");
 
 interface LocationI {
@@ -20,7 +20,7 @@ interface LocationI {
 }
 type LocationType = LocationI;
 
-const App: React.FC = () => {
+const Map: React.FC<any> = ({ _panel }) => {
   const [location, setLocation] = useState<any>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [currentLocation, setCurrentLocation] = useState<LocationType | any>();
@@ -78,6 +78,7 @@ const App: React.FC = () => {
       mounted = false;
     };
   }, [selectedLocation]);
+
   if (loading) {
     return (
       <View
@@ -94,7 +95,7 @@ const App: React.FC = () => {
   return (
     <View style={styles.container}>
       <StatusBar hidden />
-      <Header cityName={selectedReversedLocation?.name} />
+      <Header cityName={selectedReversedLocation?.name} _panel={_panel} />
       <MapView
         initialRegion={{
           latitude: location.latitude,
@@ -142,7 +143,7 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Map;
 
 const styles = StyleSheet.create({
   container: {

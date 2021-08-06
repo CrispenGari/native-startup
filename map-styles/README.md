@@ -4,7 +4,7 @@ In this simple application we build a simple map view with custom styles which w
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/map-styles/Screenshot_20210806-112034_Expo%20Go.jpg)
 
 ### Installations
 
