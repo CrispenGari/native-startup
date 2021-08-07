@@ -4,7 +4,7 @@ In this we are going to create a simple application that looks as follows:
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/rn-bottom-sheet-image-cropping/Screenshot_20210807-204301_Expo%20Go.jpg)
 
 ### Installation of required packages
 
