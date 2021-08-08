@@ -4,7 +4,7 @@ This is a demo on how to use the `thump` slider in react native using a cool pac
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/practice/rn-thump-slider/Screenshot_20210808-114655_Expo%20Go.jpg)
 
 ### Installation
 
@@ -62,6 +62,6 @@ export default function App() {
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/practice/rn-thump-slider/Screenshot_20210808-112633_Expo%20Go.jpg)
 
 - [Ref](https://github.com/n4kz/react-native-indicators)
