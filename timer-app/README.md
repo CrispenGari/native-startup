@@ -4,4 +4,4 @@ This is a simple react native countdown application using the Animated API.
 
 ### Demo
 
-![img]()
+![img](https://github.com/CrispenGari/native-startup/blob/main/timer-app/Screenshot_20210813-110707_Expo%20Go.jpg)
