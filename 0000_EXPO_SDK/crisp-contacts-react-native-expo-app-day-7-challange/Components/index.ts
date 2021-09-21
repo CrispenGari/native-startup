@@ -1,0 +1,5 @@
+export {default as Header} from './Header/Header'
+export {default as Main} from './Main/Main'
+export {default as ContactCard} from './ContactCard/ContactCard'
+export {default as AddContact} from './AddContact/AddContact'
+export {default as EditContact} from './EditContact/EditContact'

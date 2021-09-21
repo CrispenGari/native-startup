@@ -1,0 +1,5 @@
+export {default as Header} from './Header/Header'
+export {default as Main} from './Main/Main'
+export {default as Album} from './Album/Album'
+export {default as ImageCard} from './ImageCard/ImageCard'
+export {default as ImageViewer} from './ImageViewer/ImageViewer'
