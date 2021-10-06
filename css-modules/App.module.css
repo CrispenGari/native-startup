@@ -1,0 +1,18 @@
+.ballon {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  justify-content: center;
+  animation: identifier 3s ease 1s infinite alternate forwards;
+  position: relative;
+  bottom: -100px;
+}
+
+@keyframes identifier {
+  from {
+    bottom: -100px;
+  }
+  to {
+    top: -100px;
+  }
+}
