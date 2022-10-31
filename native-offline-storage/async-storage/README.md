@@ -91,7 +91,7 @@ Look at the code in the files for examples based on a todo application.
 
 ### Disadvantages of using Async Storage
 
-This way of storing data is not secured and we will not recommend it for storing sensitive data like `tokens` and `keys`.
+This way of storing data is not secured and we will not recommend it for storing sensitive data like `tokens` and `keys`. If your data need to be protected consider using [react-native-encrypted-storage](https://github.com/emeraldsanto/react-native-encrypted-storage)
 
 ### References
 
