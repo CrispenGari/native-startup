@@ -144,6 +144,65 @@ return (
 
 There are many gestures that can be found [here](https://docs.swmansion.com/react-native-gesture-handler/docs/api/gestures/pinch-gesture).
 
+### Swipeable
+
+Allows you to swipe an element left or right and show options, you can read more [here](https://docs.swmansion.com/react-native-gesture-handler/docs/api/components/swipeable).
+
+```ts
+import React from "react";
+import { Text, View } from "react-native";
+import Swipeable from "react-native-gesture-handler/Swipeable";
+const App = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Swipeable
+        renderLeftActions={(progress, dragX) => {
+          return <Text>Left</Text>;
+        }}
+      >
+        <View style={{ width: 300, padding: 20, backgroundColor: "red" }}>
+          <Text>Hello</Text>
+        </View>
+      </Swipeable>
+    </View>
+  );
+};
+
+export default App;
+```
+
+### Drawer
+
+```tsx
+import DrawerLayout from "react-native-gesture-handler/DrawerLayout";
+const App = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <DrawerLayout
+        drawerWidth={200}
+        // drawerPosition={DrawerLayout.positions.Left}
+        drawerType="back"
+        drawerBackgroundColor="#ddd"
+        renderNavigationView={() => {
+          return (
+            <View>
+              <Text>I am in the drawer!</Text>
+            </View>
+          );
+        }}
+        onDrawerSlide={(status) => console.log({ status })}
+      >
+        <View style={{ flex: 1 }}>
+          <Text>This</Text>
+        </View>
+      </DrawerLayout>
+    </View>
+  );
+};
+
+export default App;
+```
+
 ### Refs
 
 1. [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/api/gestures/pinch-gesture)
