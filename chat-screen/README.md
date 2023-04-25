@@ -159,5 +159,5 @@ export default Chat;
 Output:
 
 <p align="center">
-<img src="/1.jpeg" alt="demo" width="200"/>
+<img src="1.jpeg" alt="demo" width="200"/>
 </p>
