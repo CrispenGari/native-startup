@@ -345,11 +345,11 @@ describe("<Comments/>", () => {
           ]),
       })
     );
-    const { getByText } = render(<Comments />);
+    render(<Comments />);
     await waitFor(() => {
       expect(fetch).toHaveBeenCalled();
     });
-    const text = getByText("first comment");
+    const text = screen.getByText("first comment");
     expect(text).toBeOnTheScreen();
   });
 
@@ -361,25 +361,19 @@ describe("<Comments/>", () => {
       })
     );
 
-    const { getByText } = render(<Comments />);
+    render(<Comments />);
     await waitFor(() => {
       expect(fetch).toHaveBeenCalled();
     });
 
-    const catFactElement = getByText("No Comments!");
-    expect(catFactElement).toBeOnTheScreen();
+    const text = screen.getByText("No Comments!");
+    expect(text).toBeOnTheScreen();
   });
 
   it("displays no comments due to loading", async () => {
-    // @ts-ignore
-    fetch = jest.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve([]),
-      })
-    );
-    const { getByText } = render(<Comments />);
-    const catFactElement = getByText("Loading...");
-    expect(catFactElement).toBeOnTheScreen();
+    render(<Comments />);
+    const text = await screen.findByText("Loading...");
+    expect(text).toBeOnTheScreen();
   });
 });
 ```

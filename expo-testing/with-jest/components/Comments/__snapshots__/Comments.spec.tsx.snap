@@ -5,9 +5,3 @@ exports[`<Comments/> renders correctly 1`] = `
   Loading...
 </Text>
 `;
-
-exports[`<Comments/> renders correctly with initial value of 10 1`] = `
-<Text>
-  Loading...
-</Text>
-`;

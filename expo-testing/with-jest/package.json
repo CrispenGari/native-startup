@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "dev:test": "jest --watch",
-    "test": "jest"
+    "test": "jest -u --coverage=false"
   },
   "dependencies": {
     "expo": "~50.0.8",
