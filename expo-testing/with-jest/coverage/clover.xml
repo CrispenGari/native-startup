@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1709309685695" clover="3.2.0">
+  <project timestamp="1709309685695" name="All files">
+    <metrics statements="22" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="13" coveredmethods="13" elements="39" coveredelements="39" complexity="0" loc="22" ncloc="22" packages="5" files="5" classes="5"/>
+    <package name="with-jest">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.tsx" path="C:\Users\RGaridzirai\OneDrive - Walter Sisulu University\Desktop\TINASHE CRISPEN G\native-startup\expo-testing\with-jest\App.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="with-jest.components.Card">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Card.tsx" path="C:\Users\RGaridzirai\OneDrive - Walter Sisulu University\Desktop\TINASHE CRISPEN G\native-startup\expo-testing\with-jest\components\Card\Card.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="with-jest.components.Comments">
+      <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+      <file name="Comments.tsx" path="C:\Users\RGaridzirai\OneDrive - Walter Sisulu University\Desktop\TINASHE CRISPEN G\native-startup\expo-testing\with-jest\components\Comments\Comments.tsx">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="4" coveredmethods="4"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="14" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="17" count="3" type="cond" truecount="2" falsecount="0"/>
+      </file>
+    </package>
+    <package name="with-jest.components.Counter">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="Counter.tsx" path="C:\Users\RGaridzirai\OneDrive - Walter Sisulu University\Desktop\TINASHE CRISPEN G\native-startup\expo-testing\with-jest\components\Counter\Counter.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="with-jest.components.Like">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Like.tsx" path="C:\Users\RGaridzirai\OneDrive - Walter Sisulu University\Desktop\TINASHE CRISPEN G\native-startup\expo-testing\with-jest\components\Like\Like.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

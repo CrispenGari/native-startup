@@ -1,0 +1,26 @@
+name: Test React Native App
+
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "expo-testing/with-jest/**"
+
+jobs:
+  unit-test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./expo-testing/with-jest/
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+      - run: yarn install
+      - run: yarn test
