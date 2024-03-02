@@ -19,7 +19,7 @@ jobs:
         working-directory: ./expo-testing/with-jest/
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
       - run: yarn install
