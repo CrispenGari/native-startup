@@ -12,7 +12,7 @@ You are required to have the following:
 ### Setting up Android Emulator on Windows.
 
 1. First you need to download the Java `11+`
-2. To download `Java11` we are going to first make sure that you have [`chocolatey`](https://chocolatey.org/) installed in your computer. To check that run the following command:
+2. To download `Java17` we are going to first make sure that you have [`chocolatey`](https://chocolatey.org/) installed in your computer. To check that run the following command:
 
 ```shell
 choco --version
@@ -24,10 +24,10 @@ If you don't get the version number of chocolatey you can open `cmd` as an admin
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command " [System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 ```
 
-3. To Download `Java18` we will run the following command:
+3. To Download `Java17` we will run the following command:
 
 ```shell
-choco install openjdk11
+choco install openjdk17
 ```
 
 4. The next thing is to install [`Android Studio`](https://developer.android.com/studio)
