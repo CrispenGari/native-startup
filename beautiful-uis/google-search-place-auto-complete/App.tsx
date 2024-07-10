@@ -56,7 +56,7 @@ const SearchBar = () => {
           console.log(data, details);
         }}
         query={{
-          key: "AIzaSyDxn56Y9AFv3vtk2mEORYC4f3oAdEfXQps",
+          key: "Your api key",
           language: "en",
           components: "country:za",
           types: "establishment",
