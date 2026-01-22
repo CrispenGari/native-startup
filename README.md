@@ -4,6 +4,8 @@
 
 ### Environment
 
+> The latest doccumentation for expo for setting up android studio emulator: https://docs.expo.dev/workflow/android-studio-emulator/
+
 You are required to have the following:
 
 [x] Nodejs
